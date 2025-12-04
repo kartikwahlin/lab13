@@ -10,6 +10,7 @@ public class wahlin_lab13 {
     private ArrayList<Integer> values;
 
     public void readData(String filename){
+        values = new ArrayList<Integer>();
         try{
             BufferedReader br = new BufferedReader(new FileReader(filename));
             String line;

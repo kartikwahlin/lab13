@@ -62,17 +62,17 @@ public class lab13Test
 			// put code here to populate expectedResult1 with the values in testData.get(0)
 			// so that you can use "assertArrayEquals" to verify expectedResult1 and lab.getResult1() are the same
 			expectedResult1 = new Integer[testData.get(0).size()];
-			
+			expectedResult1 = testData.get(0).toArray(new Integer[0]);
 			
 			// put code here to populate expectedResult2 with the values in testData.get(1)
 			// so that you can use "assertArrayEquals" to verify expectedResult2 and lab.getResult2() are the same
 			expectedResult2 = new Integer[testData.get(1).size()];
-			
+			expectedResult2 = testData.get(1).toArray(new Integer[0]);
 			
 			// put code here to populate expectedResult3 with the values in testData.get(2)
 			// so that you can use "assertArrayEquals" to verify expectedResult3 and lab.getResult3() are the same
 			expectedResult3 = new Integer[testData.get(2).size()];
-			
+			expectedResult3 = testData.get(2).toArray(new Integer[0]);
 		}
 		catch(Exception e)
 		{
@@ -80,4 +80,40 @@ public class lab13Test
 			System.exit(0);
 		}		
 	}
+
+	@Test
+	void testGetOddCount(){
+		assertEquals(lab.getOddCount(), 507);
+	}
+
+	@Test
+	void testGetEvenCount(){
+		assertEquals(lab.getEvenCount(), 493);
+	}
+
+	@Test
+	void testGetDistinctGreaterThanFiveCount(){
+		assertEquals(lab.getDistinctGreaterThanFiveCount(), 94);
+	}
+
+	@Test
+	void testGetTotalCount(){
+		assertEquals(lab.getTotalCount(), 1000);
+	}
+
+	@Test
+	void testGetResult1(){
+		assertArrayEquals(lab.getResult1(), expectedResult1);
+	}
+
+	@Test
+	void testGetResult2(){
+		assertArrayEquals(lab.getResult2(), expectedResult2);
+	}
+
+	@Test
+	void testGetResult3(){
+		assertArrayEquals(lab.getResult3(), expectedResult3);
+	}
+	
 }
