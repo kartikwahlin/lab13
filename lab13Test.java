@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 public class lab13Test 
 {
-	lab13 lab;
+	wahlin_lab13 lab;
 	Integer[] expectedResult1;
 	Integer[] expectedResult2;
 	Integer[] expectedResult3;
@@ -20,7 +20,7 @@ public class lab13Test
 	public void setUp() throws Exception 
 	{
 		// instantiate an instance of lab13
-		lab = new lab13();
+		lab = new wahlin_lab13();
 		
 		// read the input values and populate the ArrayList<Integer> in the lab13 class
 		lab.readData(inputFilename);
